@@ -14,17 +14,8 @@ from pilkit.processors import *
 
 VIDEO_EXTENSIONS = ['mp4']
 MAX_VIDEO_SIZE = 104857600  # 100 MB
-
-
-def rename_product_image(instance, filename):
-    upload_to = 'product-image'
-    ext = filename.split('.')[-1]
-    if instance.pk:
-        filename = 'temp{}.{}'.format(instance.pk, ext)
-    else:
-        filename = '{}.{}'.format(uuid4().hex, ext)
-    return os.path.join(upload_to, filename)
-
+def rename_product_image():
+    pass
 
 VIDEO, IMAGE = ("Video", "Image")
 
@@ -111,8 +102,11 @@ class Product(models.Model):
     @property
     def medium_images(self):
         lst = [i.image_medium.url for i in self.image_set.all()[:4]]
-        while len(lst) < 4:
-            lst.extend(lst)
+        for i in range(3):
+            if len(lst) < 4:
+                lst.append(lst[i])
+            else:
+                return lst[:4]
         return lst[:4]
 
     @property
@@ -140,7 +134,7 @@ class Items(models.Model):
         
 class Image(models.Model):
     image = models.ImageField(
-        upload_to=rename_product_image, verbose_name=_("rasm"), max_length=150, help_text=_("Tavsiya etiladiogan rasm o'lchani 719x791"))
+        upload_to="product/%Y%m%d", verbose_name=_("rasm"), max_length=150, help_text=_("Tavsiya etiladiogan rasm o'lchani 719x791"))
     product = models.ForeignKey(
         'Product', on_delete=models.CASCADE, verbose_name=_("Maxsulot"))
 
@@ -153,7 +147,7 @@ class Image(models.Model):
     image_medium = ImageSpecField(
         source='image',
         processors=[Resize(774, 800)],
-        format='JPEG',
+        format='PNG',
         options={'quality': 100}
     )
     created_at = models.DateTimeField(auto_now_add=True)

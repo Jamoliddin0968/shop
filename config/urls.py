@@ -30,5 +30,7 @@ urlpatterns += i18n_patterns(
     path('admin/', admin.site.urls),
     path("",include("shop.urls")),
 ) 
-handler404 = 'shop.views.handler404'
+
 urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns+=static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+handler404 = 'shop.views.handler404'

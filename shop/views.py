@@ -76,5 +76,9 @@ def subcategoryDetail(request,pk):
     }
     return render(request,"shop/cat.html",context)
 
+def handler404(request, exception):
+    return render(request, 'page404.html', status=404)
+
+
 def test(request):
     return render(request,"home.html")

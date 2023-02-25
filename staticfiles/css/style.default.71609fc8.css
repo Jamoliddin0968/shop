@@ -55,10 +55,6 @@ body {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 
-.container {
-    display: flex;
-    align-items: center;    
-}
 
 [tabindex="-1"]:focus:not(:focus-visible) {
     outline: 0 !important

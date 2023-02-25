@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-25 09:35+0000\n"
+"POT-Creation-Date: 2023-02-25 18:43+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,170 +20,175 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: config/settings.py:131
+#: .\config\settings.py:133
 msgid "Uzbek"
 msgstr ""
 
-#: config/settings.py:132
+#: .\config\settings.py:134
 msgid "Russian"
 msgstr ""
 
-#: main.html:42 templates/base.html:67
+#: .\main.html:42 .\templates\base.html:67
 msgid "Tilni tanlang"
 msgstr "Выберите язык"
 
-#: shop/apps.py:7
+#: .\shop\apps.py:7
 msgid "Kategoriyalar va Maxsulotlar"
 msgstr "Категории и продукты"
 
-#: shop/models.py:35
+#: .\shop\models.py:35
 msgid "Kategoriya nomi"
 msgstr "Название категории"
 
-#: shop/models.py:37
+#: .\shop\models.py:37
 msgid "Kategoriya tarifi"
 msgstr "Категория тарифа"
 
-#: shop/models.py:39 shop/models.py:166
+#: .\shop\models.py:39 .\shop\models.py:166
 msgid "Rasm"
 msgstr "Картина"
 
-#: shop/models.py:39
+#: .\shop\models.py:39
 msgid "rasm o'lchami 2533x1105 nisbatda bo'lishi kerak"
 msgstr "размер изображения должен быть 2533x1105 соотношение сторон"
 
-#: shop/models.py:62 shop/models.py:70 shop/models.py:94
+#: .\shop\models.py:62 .\shop\models.py:70 .\shop\models.py:94
 msgid "Kategoriya"
 msgstr "Категория"
 
-#: shop/models.py:63
+#: .\shop\models.py:63
 msgid "Kategoriyalar"
 msgstr "Категории"
 
-#: shop/models.py:68
+#: .\shop\models.py:68
 msgid "Subkategoriya nomi"
 msgstr "Название подкатегории"
 
-#: shop/models.py:76
+#: .\shop\models.py:76
 msgid "SubKategoriya"
 msgstr "Подкатегория"
 
-#: shop/models.py:77
+#: .\shop\models.py:77
 msgid "SubKategoriyalar"
 msgstr "Подкатегории"
 
-#: shop/models.py:89
+#: .\shop\models.py:89
 msgid "nomi"
 msgstr "имя"
 
-#: shop/models.py:90
+#: .\shop\models.py:90
 msgid "narxi"
-msgstr "расходы"
+msgstr "цена"
 
-#: shop/models.py:92
+#: .\shop\models.py:92
 msgid "Valyutasi"
 msgstr "Валюта"
 
-#: shop/models.py:95
+#: .\shop\models.py:95
 msgid "Ta'rifi"
-msgstr "определение"
+msgstr "Описание"
 
-#: shop/models.py:97
+#: .\shop\models.py:97
 msgid "Xarakteristikasi"
 msgstr "Характеристика"
 
-#: shop/models.py:129 shop/models.py:145
+#: .\shop\models.py:129 .\shop\models.py:145
 msgid "Maxsulot"
 msgstr "Продукт"
 
-#: shop/models.py:130
+#: .\shop\models.py:130
 msgid "Maxsulotlar"
 msgstr "Продукты"
 
-#: shop/models.py:134
+#: .\shop\models.py:134
 msgid "Hususiyat"
 msgstr "Особенность"
 
-#: shop/models.py:135
+#: .\shop\models.py:135
 msgid "Qiymat"
 msgstr "значение"
 
-#: shop/models.py:138 shop/models.py:139
+#: .\shop\models.py:138 .\shop\models.py:139
 msgid "Texnik hususiyatlar"
 msgstr "Технические характеристики"
 
-#: shop/models.py:143
+#: .\shop\models.py:143
 msgid "rasm"
 msgstr "картина"
 
-#: shop/models.py:143
+#: .\shop\models.py:143
 msgid "Tavsiya etiladiogan rasm o'lchani 719x791"
 msgstr "Рекомендуемый размер изображения 719x791."
 
-#: shop/models.py:167
+#: .\shop\models.py:167
 msgid "Rasmlar"
 msgstr "Картинки"
 
-#: shop/models.py:171
+#: .\shop\models.py:171
 msgid "Carusel fon chiqadigan rasm"
 msgstr "Фоновое изображение карусели"
 
-#: shop/models.py:186 shop/models.py:187 shop/templates/shop/cat.html:11
-#: shop/templates/shop/detail.html:12
+#: .\shop\models.py:186 .\shop\models.py:187 .\shop\templates\shop\cat.html:11
+#: .\shop\templates\shop\detail.html:12 .\templates\page404.html:22
 msgid "Bosh sahifa"
 msgstr "Домашняя страница"
 
-#: shop/templates/shop/detail.html:59 shop/templates/shop/detail.html:184
+#: .\shop\templates\shop\detail.html:59 .\shop\templates\shop\detail.html:184
 msgid "Trenddagi"
 msgstr "В тренде"
 
-#: shop/templates/shop/detail.html:66
+#: .\shop\templates\shop\detail.html:66
 msgid "Ranglar"
 msgstr "Цвета"
 
-#: shop/templates/shop/detail.html:100
+#: .\shop\templates\shop\detail.html:100
 msgid "Sotib olish"
-msgstr "Распроданный"
+msgstr "Купить"
 
-#: shop/templates/shop/detail.html:119
+#: .\shop\templates\shop\detail.html:119
 msgid "Tavsif"
 msgstr "Описание"
 
-#: shop/templates/shop/detail.html:125
+#: .\shop\templates\shop\detail.html:125
 msgid "Qo'shimcha ma'lumot"
 msgstr "Дополнительная информация"
 
-#: shop/templates/shop/detail.html:173
+#: .\shop\templates\shop\detail.html:173
 msgid "Sizga ham yoqishi mumkin"
 msgstr "Вам также может понравиться"
 
-#: shop/templates/shop/detail.html:174
+#: .\shop\templates\shop\detail.html:174
 msgid "Tegishli mahsulotlar"
 msgstr "Сопутствующие товары"
 
-#: shop/templates/shop/detail.html:202 shop/templates/shop/index.html:71
+#: .\shop\templates\shop\detail.html:202 .\shop\templates\shop\index.html:71
 msgid "Oldingi"
 msgstr "Предыдущий"
 
-#: shop/templates/shop/detail.html:211 shop/templates/shop/index.html:74
+#: .\shop\templates\shop\detail.html:211 .\shop\templates\shop\index.html:74
 msgid "Keyingi"
 msgstr "Следующий"
 
-#: shop/templates/shop/index.html:41
+#: .\shop\templates\shop\index.html:41
 msgid "Ko'rish"
-msgstr "Видеть"
+msgstr "Смотреть"
 
-#: shop/templates/shop/index.html:52
+#: .\shop\templates\shop\index.html:52
 msgid "Eng yangi mahsulotlarni ko'rib chiqing"
 msgstr "Ознакомьтесь с новейшими продуктами"
 
-#: shop/templates/shop/index.html:58
+#: .\shop\templates\shop\index.html:58
 msgid "Yangi"
-msgstr "новый"
+msgstr "Новый"
 
-#: users/apps.py:8
+#: .\users\apps.py:8
 msgid "Foydalanuvchilar"
 msgstr "Пользователи"
+
+#, fuzzy
+#~| msgid "Rasmlar"
+#~ msgid "mar"
+#~ msgstr "Картинки"
 
 #~ msgid "Rasmi"
 #~ msgstr "Картина"
@@ -192,7 +197,7 @@ msgstr "Пользователи"
 #~ msgstr "Номер телефона"
 
 #~ msgid "Telegram"
-#~ msgstr "Телеграмма"
+#~ msgstr "Телеграмм"
 
 #~ msgid "Instagram"
 #~ msgstr "Инстаграм"

@@ -5,5 +5,5 @@ urlpatterns = [
     path("categories/<int:pk>/", views.categoryDetail, name="categoryDetail"),
     path("subcategories/<int:pk>/", views.categoryDetail, name="subcategoryDetail"),
     path("detail/<int:pk>/",views.productDetail,name="productDetail"),
-    path("home/",views.test),
+    # path("home/",views.test),
 ]

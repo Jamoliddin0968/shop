@@ -8,7 +8,7 @@ class CategoryTranslationOptions(TranslationOptions):
     
 @register(Product)
 class ColorTranslationOptions(TranslationOptions):
-    fields = ("name","description","characteristic")
+    fields = ("name","description")
 
 
 @register(SubCategory)

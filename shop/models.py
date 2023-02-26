@@ -82,10 +82,8 @@ class Product(models.Model):
     currency = models.CharField(
         choices=VALYUTA, default=SOM, max_length=7, verbose_name=_("Valyutasi"))
     subcategory = models.ForeignKey(
-        SubCategory, on_delete=models.SET_NULL, null=True, blank=True, verbose_name=_("Kategoriya"))
+        SubCategory, on_delete=models.SET_NULL,null=True, verbose_name=_("Kategoriya"))
     description = models.TextField(verbose_name=_("Ta'rifi"))
-    characteristic = models.TextField(
-        verbose_name=_("Xarakteristikasi"), null=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -95,6 +93,7 @@ class Product(models.Model):
 
     def getItems(self):
         return self.items_set.all()
+    
     @property
     def small_image(self):
         return self.image_set.first().image_small.url
@@ -102,11 +101,8 @@ class Product(models.Model):
     @property
     def medium_images(self):
         lst = [i.image_medium.url for i in self.image_set.all()[:4]]
-        for i in range(3):
-            if len(lst) < 4:
-                lst.append(lst[i])
-            else:
-                return lst[:4]
+        while len(lst) < 4:
+            lst.append(lst[0])
         return lst[:4]
 
     @property

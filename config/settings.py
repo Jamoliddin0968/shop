@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,11 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-$27aaqz=1u)3j8&dsfxl(ja))nqn+3=x_ik0v1mfqp)ty8ws6c"
-
+SECRET_KEY = config("KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ['zvukon.uz',"www.zvukon.uz"]
 
@@ -97,11 +97,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'zvukonu2_shop',
-        'USER': 'zvukonu2_root',
-        'PASSWORD': 'dpGLv(ajZ&^7',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': config("DB_NAME",default="test"),
+        'USER': config("DB_USER",default="root"),
+        'PASSWORD': config("DB_PASSWORD",default="11111111"),
+        'HOST': config("DB_HOST",default="localhost"),
+        'PORT': config("DB_PORT",default="3306"),
     }
 }
 

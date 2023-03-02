@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-$27aaqz=1u)3j8&dsfxl(ja))nqn+3=x_ik0v1mfqp)ty8ws6c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['zvukon.uz',"www.zvukon.uz"]
 
 # Application definition
 INSTALLED_APPS = [

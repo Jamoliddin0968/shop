@@ -8,7 +8,7 @@ from django.core.validators import FileExtensionValidator
 from django.db import models
 from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
-from imagekit.models import ImageSpecField
+from imagekit.models import ImageSpecField , ProcessedImageField
 from PIL import Image
 from pilkit.processors import *
 
@@ -130,7 +130,7 @@ class Items(models.Model):
         
 class Image(models.Model):
     image = models.ImageField(
-        upload_to="product/%Y%m%d", verbose_name=_("rasm"), max_length=150, help_text=_("Tavsiya etiladiogan rasm o'lchani 719x791"))
+        upload_to="product/%Y/%m/%d", verbose_name=_("rasm"), max_length=150, help_text=_("Tavsiya etiladiogan rasm o'lchani 719x791"))
     product = models.ForeignKey(
         'Product', on_delete=models.CASCADE, verbose_name=_("Maxsulot"))
 

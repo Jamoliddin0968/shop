@@ -57,7 +57,7 @@
         <div class="swiper-slide pb-5">
           <div class="product mb-4"><span class="badge rounded-0 bg-primary">{% trans "Yangi" %}</span>
             <a href={% url 'productDetail' product.pk %}>
-              <img class="img-fluid" src={{product.small_image}} alt="Round grey hanging decor">
+              <img class="img-fluid" style="object-fit:cover" src={{product.small_image}} alt="Round grey hanging decor">
             </a>      
           </div>
           <h6 class="text-center"><a class="reset-anchor" href={% url 'productDetail' product.pk %}>{{product.name | title}}</a></h6>

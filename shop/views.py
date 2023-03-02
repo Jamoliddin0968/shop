@@ -1,6 +1,5 @@
 from django.shortcuts import render , get_object_or_404
 from .models import Category , Product,SubCategory , HomePageImages
-from hitcount.utils import get_hitcount_model
 from urllib.parse import urlparse
 from django.conf import settings
 from django.http import HttpResponseRedirect
@@ -27,7 +26,6 @@ def set_language(request, language):
         response = HttpResponseRedirect("/")
     return response
 
-
 def productList(request):
     cats = Category.objects.all().order_by("-id")[:5]
     slides = HomePageImages.objects.all()
@@ -36,7 +34,6 @@ def productList(request):
         "slides":slides
     }
     return render(request,"shop/index.html",context)
-
 
 def productDetail(request,pk):
     object = get_object_or_404(Product, pk=pk)
@@ -47,7 +44,6 @@ def productDetail(request,pk):
     }
     # context["popular_products"] = popular_products
     return render(request,"shop/detail.html",context)
-
 
 def categoryDetail(request,pk):
     cat = get_object_or_404(Category,pk=pk)
@@ -78,7 +74,6 @@ def subcategoryDetail(request,pk):
 
 def handler404(request, exception):
     return render(request, 'page404.html', status=404)
-
 
 def test(request):
     return render(request,"home.html")

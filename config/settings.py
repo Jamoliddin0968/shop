@@ -140,21 +140,20 @@ LOCALE_PATHS = [
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    "/home/zvukon2/zvukon.uz/django/staticfiles",
-    
+    "/home/zvukonu2/zvukon.uz/django/staticfiles",
 ]
 
-STATIC_ROOT = "/home/zvukon2/zvukon.uz/django/static"
+STATIC_ROOT = "/home/zvukonu2/zvukon.uz/django/static"
 # Simplified static file serving.
 # https://pypi.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = "/home/zvukon2/zvukon.uz/django/media"
+MEDIA_URL = "media/"
+MEDIA_ROOT = "/home/zvukonu2/zvukon.uz/django/media"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 

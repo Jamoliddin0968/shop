@@ -98,7 +98,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'zvukonu2_shop',
-        'USER': 'root',
+        'USER': 'zvukonu2_root',
         'PASSWORD': 'dpGLv(ajZ&^7',
         'HOST': 'localhost',
         'PORT': '3306',

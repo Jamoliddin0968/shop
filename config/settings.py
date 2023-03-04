@@ -14,7 +14,6 @@ from pathlib import Path
 import os
 from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -153,17 +152,17 @@ LOCALE_PATHS = [
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    "/home/zvukonu2/zvukon.uz/django/static",
+    '/home/zvukonu2/zvukon.uz/django/static',
 ]
 
-STATIC_ROOT = "/home/zvukonu2/zvukon.uz/django/staticfiles"
+STATIC_ROOT = '/home/zvukonu2/zvukon.uz/django/staticfiles'
 
 # https://pypi.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = "/home/zvukonu2/zvukon.uz/django/media"
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/home/zvukonu2/public_html/media'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 

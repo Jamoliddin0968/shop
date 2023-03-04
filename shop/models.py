@@ -27,14 +27,14 @@ class Category(models.Model):
     description = models.TextField(verbose_name=_(
         "Kategoriya tarifi"), null=True, blank=True)
     image = models.ImageField(
-        upload_to="category-image", verbose_name=_("Rasm"), help_text=_("rasm o'lchami 2533x1105 nisbatda bo'lishi kerak"))
+        upload_to="category/",  verbose_name=_("Rasm"),help_text=_("rasm o'lchami 2533x1105 nisbatda bo'lishi kerak"),max_length=None)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     image_bg = ImageSpecField(
         source='image',
         processors=[Resize(2533, 1105)],
-        format='PNG',
+        format='JPEG',
         options={'quality': 100}
     )
     def __str__(self) -> str:
@@ -130,20 +130,20 @@ class Items(models.Model):
         
 class Image(models.Model):
     image = models.ImageField(
-        upload_to="product/%Y/%m/%d", verbose_name=_("rasm"), max_length=150, help_text=_("Tavsiya etiladiogan rasm o'lchani 719x791"))
+        upload_to="product/%Y/%m/%d/", verbose_name=_("rasm"), help_text=_("Tavsiya etiladiogan rasm o'lchani 719x791"),max_length=None)
     product = models.ForeignKey(
         'Product', on_delete=models.CASCADE, verbose_name=_("Maxsulot"))
 
     image_small = ImageSpecField(
         source='image',
         processors=[Resize(719, 791)],
-        format='PNG',
+        format='JPEG',
         options={'quality': 100}
     )
     image_medium = ImageSpecField(
         source='image',
         processors=[Resize(774, 800)],
-        format='PNG',
+        format='JPEG',
         options={'quality': 100}
     )
     created_at = models.DateTimeField(auto_now_add=True)
@@ -158,16 +158,15 @@ class Image(models.Model):
         
     
 class HomePageImages(models.Model):
-    img = models.ImageField(_("Carusel fon chiqadigan rasm"), upload_to="settings/", max_length=None)
+    img = models.ImageField(_("Carusel fon chiqadigan rasm"), upload_to="settings/",max_length=None)
     date_text = models.CharField(max_length=100,help_text="Summer 2020")
     caption_text = models.CharField(max_length=100,help_text="Fashion Collections")
     description_text = models.TextField(help_text="Lorem ipsum dolor sit amet")
     
-    
     image_bg = ImageSpecField(
         source='img',
         processors=[Resize(4520, 2295)],
-        format='PNG',
+        format='JPEG',
         options={'quality': 100}
     )
     def __str__(self) -> str:

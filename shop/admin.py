@@ -5,6 +5,8 @@ from modeltranslation.admin import TranslationAdmin
 from django.contrib.auth.models import Group
 
 admin.site.unregister(Group)
+admin.site.site_header = "Zvukon.uz"
+admin.site.site_title = admin.site.site_header
 class ImageInline(admin.StackedInline):
     model = Image
     min_num = 1
@@ -14,12 +16,18 @@ class ItemsInline(admin.TabularInline):
     model = Items
     # min_num = 1
     extra = 1
-       
+    
+    
+class SubCategoryInline(admin.TabularInline):
+    model = SubCategory
+    extra = 1
+    list_display = ['name','category']
 @admin.register(Category)
 class CategoryAdmin(TranslationAdmin):
     list_display = ['name',"description"]
     search_fields = ['name']
     list_per_page = 10
+    inlines=(SubCategoryInline,)
         
 
 @admin.register(Product)
